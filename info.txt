@@ -1,0 +1,66 @@
+Librerias de maquetación
+
+- Bootstrap / react-bootstrap / reactsrap
+- tailwindcss
+- ant design
+- 
+
+
+JSX
+
+if / else => operador ternario
+
+if(condicion) { 
+    return x 
+    } else { 
+        return y}
+
+//Expresion
+condicion 
+
+for / .forEach => .map
+
+//////////////////////////////////
+
+ITEM LIST CONTAINER
+
+import React from 'react'
+import ItemCount from './ItemCount'
+import ItemList from './ItemList'
+
+function ItemListContainer(props) {
+
+    let productos = [{id:1, nombre:"Producto 1"}, {id:2, nombre:"Producto 2"}]
+
+
+    const onAdd = () => {
+        console.log("Soy on Add")
+    }
+
+
+
+
+  return (
+    <div>
+        <h2>{props.greeting}</h2>
+        <ItemCount initial={1} stock={10} onAdd={onAdd}/>
+        <ItemList productos={productos}/>
+        
+       
+    </div>
+    
+  )
+}
+
+export default ItemListContainer
+
+
+
+
+
+///////////////
+FOOTER
+
+{/* <footer className="flex justify-between p-2 bg-teal-500 text-white">
+      Fit Market - todos lo derechos reservados.
+    </footer>  */}
